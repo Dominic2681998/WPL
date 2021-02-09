@@ -1,0 +1,60 @@
+<!-- Prepare a registration form to fill the following data for taking admission for any of the courses offered. [use  checkbox,Radio button,TextArea...]
+Personal Information - Name ,Gender, DOB, Address, Phone , Guardian, Hobbies and extra curricular activities
+Course Information - BA,B.Sc,BCA
+Office Use .....Provide proper division to increase the aesthetic view
+-->
+<html>
+    <head>
+        <style>
+            .bg
+            {
+                background-color:rgb(238, 238, 238);
+
+            }
+        .dd
+        {
+            margin: auto;
+  width: 40%;
+  border: 0px solid;
+  padding: 10px;
+            
+background-color:white;
+font-family:sans-serif;
+font-style:italic;
+        }
+    </style>
+        <script>
+           function fun()
+            {
+                alert("Success");
+            }
+        </script>
+    </head>
+    <body class="bg">
+        <br> <br>
+        <center>  <h1><font style="italics">Personnel Details</font></h1></center>
+        <br> <br> <br>
+        <div class="dd">
+        <form>
+          &nbsp &nbsp First Nam&nbsp<input type="text" required><br><br>
+          &nbsp&nbsp Middle Name&nbsp<input type="text" required><br><br>
+          &nbsp&nbsp   Last Name&nbsp<input type="text" required><br><br>
+          &nbsp&nbsp   Gender:&nbspMale<input type="radio" value="Male" name="gender" selected>&nbsp&nbsp
+            Female<input type="radio" value="Female" name="gender"><br><br>
+            &nbsp&nbsp  Date of Birth&nbsp<input type="date"required><br><br>
+            &nbsp&nbsp Address&nbsp<textarea rows="3" cols="10" required></textarea>
+            <br><br>
+            &nbsp&nbsp Phone:&nbsp<input type="text" required><br><br>
+            &nbsp&nbspGuardian:&nbsp<input type="text" required><br><br>
+            &nbsp&nbsp Hobbies and Extra Cirricular activities&nbsp<textarea rows="3" cols="10" required></textarea><br><br>
+            &nbsp&nbsp  Course:&nbsp<select required>
+                <option></option>
+                <option>BA</option>
+                <OPTION>Bsc</OPTION>
+                <option>BCA</option>
+            </select><br><br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  &nbsp&nbsp&nbsp  <input type="Submit" value="Submit" onsubmit="fun()">&nbsp&nbsp<input type="reset" value="Reset">
+        </form>
+    </div>
+    </body>
+</html>
