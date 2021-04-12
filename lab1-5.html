@@ -1,0 +1,142 @@
+<!-- 
+Q5. Perform validation for the fields given in  Q2 
+[Name ---Charaters only
+Gender -----(F|M or 1|0)	
+Date   -------Should satisfy the range(20 -25)
+Phone ------numbers only(should contain10)]  ue javascript for validation
+-->
+<html>
+    <head>
+      <style>
+        .bg
+        {
+            background-color:rgb(238, 238, 238);
+
+        }
+    .dd
+    {
+        margin: auto;
+width: 40%;
+border: 0px solid;
+padding: 10px;
+        
+background-color:white;
+font-family:sans-serif;
+font-style:italic;
+    }
+</style>
+        <script>
+          
+          function validation()
+          {
+            mob=document.getElementById("phone").value;
+            name=document.getElementById("name").value;
+            address=document.getElementById("address").value;
+            guardian=document.getElementById("guardian").value;
+            hobbies=document.getElementById("hob").value;
+            
+            if(name=="")
+            {
+              
+              window.alert("Please enter name");
+              document.getElementById("name").focus();
+              return false;
+                
+            }
+            if((document.getElementById('m').checked == false) &&(document.getElementById('f').checked == false))
+            {   
+              window.alert("Choose gender");
+              return false;
+            } 
+            if(address=="")
+            {
+              
+              window.alert("Please enter address");
+              document.getElementById("address").focus();
+              return false;
+                
+            }
+            if(mob=="")
+            {
+              
+              window.alert("Enter phone number");
+                   document.getElementById("phone").focus();
+                      return false;
+                
+            }
+           
+            if(mob!="")
+            {
+              if(isNaN(mob))
+              {
+                window.alert("Only numbers between 0-9");
+                   document.getElementById("phone").focus();
+                      return false;
+              
+              }  
+            else
+             {
+              if(mob.length!=10)
+                {
+                 
+                  window.alert("Mobile number must contain 10 digits");
+                  document.getElementById("phone").focus();
+                    return false;
+                } 
+              }
+          }
+          if(guardian=="")
+            {
+              
+              window.alert("Please enter Guardian name");
+              document.getElementById("guardian").focus();
+              return false;
+                
+            }
+            if(hobbies=="")
+            {
+              
+              window.alert("Please enter hobbies");
+              document.getElementById("hob").focus();
+              return false;
+                
+            }
+          
+                return true;
+              
+          }
+
+        </script>
+    </head>
+    
+    <body class="bg">
+      <br>      <br>
+      <br>
+      <CENTER><h1>SIGNUP</h1></CENTER>
+        <div class="dd">
+    <form onSubmit="return validation()">
+      <label>Name</label><br>
+        <input type="text" id="name"  ><br><br>
+        <label>Gender</label><br>
+        <input type="radio" name="gender" value="Male"  id="m"/>Male		
+        <input type="radio" name="gender" value="Female" id="f" />Female
+        <br><br>
+        <label>Date</label><br>
+        <input type="date" id="date" required>
+        <br><br>
+        <label>Address</label><br>
+        Address&nbsp<textarea rows="3" cols="10" id="address"></textarea>
+        <br><br>
+        <label>Phone No</label><br>
+        <input type="text" id="phone" >
+        <br><br>
+        <label>Guardian</label><br>
+        <input type="text" id="guardian"><br><br>
+        <label>Hobbies and Extra Curricular activities</label><br>
+        <textarea rows="3" cols="10" id="hob"></textarea>
+        <br><br>
+        <input type="submit" value="Submit" name="btn"> &nbsp&nbsp&nbsp<input type="reset" value="Reset">
+    </form>
+    </div>
+    </body>
+</html>
